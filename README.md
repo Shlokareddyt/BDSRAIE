@@ -32,7 +32,7 @@ for three workload types: **interactive analytics, batch ETL, and archival**.
 ├── docs/
 │   ├── decision_guide.md      # the deliverable: recommended settings + rationale
 │   └── datasheet.md           # dataset data card (license, provenance, limitations)
-└── slides/                    # 10-minute presentation
+└── slides/                    # 10-minute presentation (content.md + link to the published deck)
 ```
 
 `data/raw` and `data/converted` are not checked into git (see `.gitignore`) —
