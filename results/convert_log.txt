@@ -1,0 +1,35 @@
+Loading clean dataset...
+Loaded 4,666,440 rows, 438.6 MB in memory
+Writing parquet_snappy_none ... 1.74s, 97.4 MB, 1 files
+Writing parquet_snappy_by_date ... 1.65s, 104.6 MB, 90 files
+Writing parquet_snappy_by_date_zone ... 2.51s, 128.6 MB, 540 files
+Writing parquet_gzip_none ... 45.71s, 74.3 MB, 1 files
+Writing parquet_gzip_by_date ... 16.84s, 83.8 MB, 90 files
+Writing parquet_gzip_by_date_zone ... 15.40s, 105.2 MB, 540 files
+Writing parquet_zstd_none ... 2.29s, 78.6 MB, 1 files
+Writing parquet_zstd_by_date ... 2.09s, 86.6 MB, 90 files
+Writing parquet_zstd_by_date_zone ... 3.74s, 109.1 MB, 540 files
+Writing parquet_none_none ... 1.56s, 121.9 MB, 1 files
+Writing parquet_none_by_date ... 1.43s, 117.6 MB, 90 files
+Writing parquet_none_by_date_zone ... 2.67s, 143.5 MB, 540 files
+Writing orc_zlib_none ... 5.74s, 73.1 MB, 1 files
+Writing orc_zlib_by_date ... 7.13s, 73.5 MB, 90 files
+Writing orc_zlib_by_date_zone ... 9.93s, 73.1 MB, 540 files
+Writing orc_zstd_none ... 2.93s, 76.5 MB, 1 files
+Writing orc_zstd_by_date ... 4.80s, 76.8 MB, 90 files
+Writing orc_zstd_by_date_zone ... 7.68s, 78.0 MB, 540 files
+Writing orc_uncompressed_none ... 2.74s, 287.7 MB, 1 files
+Writing orc_uncompressed_by_date ... 4.10s, 287.9 MB, 90 files
+Writing orc_uncompressed_by_date_zone ... 5.94s, 289.4 MB, 540 files
+Writing avro_deflate_none ... 112.95s, 136.5 MB, 1 files
+Writing avro_deflate_by_date ... 115.72s, 136.3 MB, 90 files
+Writing avro_deflate_by_date_zone ... 117.84s, 129.1 MB, 540 files
+Writing avro_snappy_none ... 104.20s, 218.5 MB, 1 files
+Writing avro_snappy_by_date ... 105.27s, 218.4 MB, 90 files
+Writing avro_snappy_by_date_zone ... 107.49s, 209.3 MB, 540 files
+Writing avro_null_none ... 99.74s, 590.5 MB, 1 files
+Writing avro_null_by_date ... 101.97s, 590.7 MB, 90 files
+Writing avro_null_by_date_zone ... 109.95s, 591.4 MB, 540 files
+
+Wrote 30 benchmark rows to /home/claude/project/scripts/../results/write_benchmark.csv
+(Reference: original raw CSV.gz total size = 85.3 MB)

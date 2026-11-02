@@ -1,0 +1,122 @@
+parquet  snappy       none           point_lookup    wall= 0.127s cpu= 0.223s
+parquet  snappy       none           full_scan_agg   wall= 0.148s cpu= 0.176s
+parquet  snappy       none           wide_scan       wall= 0.209s cpu= 0.355s
+parquet  snappy       none           range_filter    wall= 0.120s cpu= 0.225s
+parquet  snappy       by_date        point_lookup    wall= 0.005s cpu= 0.006s
+parquet  snappy       by_date        full_scan_agg   wall= 0.175s cpu= 0.252s
+parquet  snappy       by_date        wide_scan       wall= 0.333s cpu= 0.580s
+parquet  snappy       by_date        range_filter    wall= 0.047s cpu= 0.087s
+parquet  snappy       by_date_zone   point_lookup    wall= 0.014s cpu= 0.015s
+parquet  snappy       by_date_zone   full_scan_agg   wall= 0.590s cpu= 0.882s
+parquet  snappy       by_date_zone   wide_scan       wall= 1.013s cpu= 1.614s
+parquet  snappy       by_date_zone   range_filter    wall= 0.149s cpu= 0.259s
+parquet  gzip         none           point_lookup    wall= 0.210s cpu= 0.377s
+parquet  gzip         none           full_scan_agg   wall= 0.149s cpu= 0.200s
+parquet  gzip         none           wide_scan       wall= 0.337s cpu= 0.635s
+parquet  gzip         none           range_filter    wall= 0.191s cpu= 0.368s
+parquet  gzip         by_date        point_lookup    wall= 0.005s cpu= 0.008s
+parquet  gzip         by_date        full_scan_agg   wall= 0.188s cpu= 0.284s
+parquet  gzip         by_date        wide_scan       wall= 0.490s cpu= 0.864s
+parquet  gzip         by_date        range_filter    wall= 0.069s cpu= 0.132s
+parquet  gzip         by_date_zone   point_lookup    wall= 0.011s cpu= 0.012s
+parquet  gzip         by_date_zone   full_scan_agg   wall= 0.673s cpu= 0.987s
+parquet  gzip         by_date_zone   wide_scan       wall= 1.371s cpu= 2.391s
+parquet  gzip         by_date_zone   range_filter    wall= 0.194s cpu= 0.339s
+parquet  zstd         none           point_lookup    wall= 0.109s cpu= 0.179s
+parquet  zstd         none           full_scan_agg   wall= 0.108s cpu= 0.128s
+parquet  zstd         none           wide_scan       wall= 0.255s cpu= 0.462s
+parquet  zstd         none           range_filter    wall= 0.152s cpu= 0.258s
+parquet  zstd         by_date        point_lookup    wall= 0.009s cpu= 0.007s
+parquet  zstd         by_date        full_scan_agg   wall= 0.208s cpu= 0.254s
+parquet  zstd         by_date        wide_scan       wall= 0.390s cpu= 0.692s
+parquet  zstd         by_date        range_filter    wall= 0.097s cpu= 0.184s
+parquet  zstd         by_date_zone   point_lookup    wall= 0.017s cpu= 0.019s
+parquet  zstd         by_date_zone   full_scan_agg   wall= 0.779s cpu= 1.273s
+parquet  zstd         by_date_zone   wide_scan       wall= 1.462s cpu= 2.504s
+parquet  zstd         by_date_zone   range_filter    wall= 0.219s cpu= 0.364s
+parquet  none         none           point_lookup    wall= 0.072s cpu= 0.123s
+parquet  none         none           full_scan_agg   wall= 0.088s cpu= 0.105s
+parquet  none         none           wide_scan       wall= 0.130s cpu= 0.224s
+parquet  none         none           range_filter    wall= 0.106s cpu= 0.196s
+parquet  none         by_date        point_lookup    wall= 0.005s cpu= 0.006s
+parquet  none         by_date        full_scan_agg   wall= 0.213s cpu= 0.298s
+parquet  none         by_date        wide_scan       wall= 0.275s cpu= 0.452s
+parquet  none         by_date        range_filter    wall= 0.045s cpu= 0.082s
+parquet  none         by_date_zone   point_lookup    wall= 0.011s cpu= 0.012s
+parquet  none         by_date_zone   full_scan_agg   wall= 0.633s cpu= 0.960s
+parquet  none         by_date_zone   wide_scan       wall= 0.953s cpu= 1.621s
+parquet  none         by_date_zone   range_filter    wall= 0.193s cpu= 0.330s
+orc      zlib         none           point_lookup    wall= 1.462s cpu= 1.464s
+orc      zlib         none           full_scan_agg   wall= 1.687s cpu= 1.677s
+orc      zlib         none           wide_scan       wall= 1.596s cpu= 1.761s
+orc      zlib         none           range_filter    wall= 1.365s cpu= 1.434s
+orc      zlib         by_date        point_lookup    wall= 0.015s cpu= 0.015s
+orc      zlib         by_date        full_scan_agg   wall= 1.469s cpu= 1.468s
+orc      zlib         by_date        wide_scan       wall= 1.694s cpu= 1.802s
+orc      zlib         by_date        range_filter    wall= 0.137s cpu= 0.137s
+orc      zlib         by_date_zone   point_lookup    wall= 0.009s cpu= 0.009s
+orc      zlib         by_date_zone   full_scan_agg   wall= 1.703s cpu= 1.670s
+orc      zlib         by_date_zone   wide_scan       wall= 2.028s cpu= 2.142s
+orc      zlib         by_date_zone   range_filter    wall= 0.160s cpu= 0.164s
+orc      zstd         none           point_lookup    wall= 0.926s cpu= 0.931s
+orc      zstd         none           full_scan_agg   wall= 0.822s cpu= 0.821s
+orc      zstd         none           wide_scan       wall= 0.945s cpu= 1.026s
+orc      zstd         none           range_filter    wall= 1.031s cpu= 1.104s
+orc      zstd         by_date        point_lookup    wall= 0.011s cpu= 0.012s
+orc      zstd         by_date        full_scan_agg   wall= 0.978s cpu= 0.986s
+orc      zstd         by_date        wide_scan       wall= 1.094s cpu= 1.203s
+orc      zstd         by_date        range_filter    wall= 0.081s cpu= 0.085s
+orc      zstd         by_date_zone   point_lookup    wall= 0.009s cpu= 0.009s
+orc      zstd         by_date_zone   full_scan_agg   wall= 1.432s cpu= 1.432s
+orc      zstd         by_date_zone   wide_scan       wall= 1.685s cpu= 1.772s
+orc      zstd         by_date_zone   range_filter    wall= 0.146s cpu= 0.148s
+orc      uncompressed none           point_lookup    wall= 0.586s cpu= 0.569s
+orc      uncompressed none           full_scan_agg   wall= 0.709s cpu= 0.706s
+orc      uncompressed none           wide_scan       wall= 0.786s cpu= 0.838s
+orc      uncompressed none           range_filter    wall= 0.668s cpu= 0.733s
+orc      uncompressed by_date        point_lookup    wall= 0.007s cpu= 0.007s
+orc      uncompressed by_date        full_scan_agg   wall= 0.755s cpu= 0.728s
+orc      uncompressed by_date        wide_scan       wall= 0.829s cpu= 0.913s
+orc      uncompressed by_date        range_filter    wall= 0.086s cpu= 0.093s
+orc      uncompressed by_date_zone   point_lookup    wall= 0.011s cpu= 0.011s
+orc      uncompressed by_date_zone   full_scan_agg   wall= 0.756s cpu= 0.761s
+orc      uncompressed by_date_zone   wide_scan       wall= 1.180s cpu= 1.257s
+orc      uncompressed by_date_zone   range_filter    wall= 0.077s cpu= 0.083s
+avro     deflate      none           point_lookup    wall=68.740s cpu=67.806s
+avro     deflate      none           full_scan_agg   wall=67.329s cpu=66.347s
+avro     deflate      none           wide_scan       wall=66.605s cpu=65.792s
+avro     deflate      none           range_filter    wall=64.798s cpu=64.028s
+avro     deflate      by_date        point_lookup    wall= 0.513s cpu= 0.506s
+avro     deflate      by_date        full_scan_agg   wall=64.495s cpu=63.482s
+avro     deflate      by_date        wide_scan       wall=63.411s cpu=62.555s
+avro     deflate      by_date        range_filter    wall= 6.115s cpu= 6.045s
+avro     deflate      by_date_zone   point_lookup    wall= 0.148s cpu= 0.143s
+avro     deflate      by_date_zone   full_scan_agg   wall=62.406s cpu=61.622s
+avro     deflate      by_date_zone   wide_scan       wall=61.832s cpu=61.110s
+avro     deflate      by_date_zone   range_filter    wall= 5.949s cpu= 5.868s
+avro     snappy       none           point_lookup    wall=67.025s cpu=66.140s
+avro     snappy       none           full_scan_agg   wall=71.164s cpu=70.319s
+avro     snappy       none           wide_scan       wall=64.833s cpu=63.997s
+avro     snappy       none           range_filter    wall=71.902s cpu=71.050s
+avro     snappy       by_date        point_lookup    wall= 0.585s cpu= 0.581s
+avro     snappy       by_date        full_scan_agg   wall=64.226s cpu=63.499s
+avro     snappy       by_date        wide_scan       wall=63.490s cpu=62.522s
+avro     snappy       by_date        range_filter    wall= 5.951s cpu= 5.885s
+avro     snappy       by_date_zone   point_lookup    wall= 0.138s cpu= 0.129s
+avro     snappy       by_date_zone   full_scan_agg   wall=66.347s cpu=65.595s
+avro     snappy       by_date_zone   wide_scan       wall=66.375s cpu=65.614s
+avro     snappy       by_date_zone   range_filter    wall= 6.084s cpu= 6.035s
+avro     null         none           point_lookup    wall=64.945s cpu=64.080s
+avro     null         none           full_scan_agg   wall=65.793s cpu=64.944s
+avro     null         none           wide_scan       wall=67.405s cpu=66.391s
+avro     null         none           range_filter    wall=74.412s cpu=73.554s
+avro     null         by_date        point_lookup    wall= 0.590s cpu= 0.578s
+avro     null         by_date        full_scan_agg   wall=66.243s cpu=65.087s
+avro     null         by_date        wide_scan       wall=66.290s cpu=65.408s
+avro     null         by_date        range_filter    wall= 5.891s cpu= 5.823s
+avro     null         by_date_zone   point_lookup    wall= 0.171s cpu= 0.159s
+avro     null         by_date_zone   full_scan_agg   wall=65.507s cpu=64.319s
+avro     null         by_date_zone   wide_scan       wall=63.449s cpu=62.579s
+avro     null         by_date_zone   range_filter    wall= 6.293s cpu= 6.201s
+
+Wrote 120 query benchmark rows to /home/claude/project/scripts/../results/query_benchmark.csv
