@@ -283,8 +283,11 @@ def run_query(fmt, path, partitioning, query):
 
 
 def main():
-    write_df = pd.read_csv(WRITE_RESULTS)
-    write_df = write_df[write_df["path"].notna()]
+    # keep_default_na=False: one of our Avro codecs is literally named
+    # "null" (meaning "no codec"), which pandas would otherwise silently
+    # read as a missing value (NaN) rather than the string "null".
+    write_df = pd.read_csv(WRITE_RESULTS, keep_default_na=False, na_values=[])
+    write_df = write_df[write_df["path"] != ""]
 
     rows = []
     for _, r in write_df.iterrows():

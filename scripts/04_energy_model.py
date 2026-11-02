@@ -67,8 +67,14 @@ def energy_joules(cpu_seconds, wall_seconds, size_gb):
 
 
 def main():
-    write_df = pd.read_csv(WRITE_RESULTS)
-    query_df = pd.read_csv(QUERY_RESULTS)
+    # keep_default_na=False: the Avro codec named "null" (= no codec) would
+    # otherwise be silently read as a missing value.
+    write_df = pd.read_csv(WRITE_RESULTS, keep_default_na=False, na_values=[])
+    query_df = pd.read_csv(QUERY_RESULTS, keep_default_na=False, na_values=[])
+    for col in ["write_seconds", "size_bytes", "size_mb", "file_count"]:
+        write_df[col] = pd.to_numeric(write_df[col], errors="coerce")
+    for col in ["wall_seconds", "cpu_seconds"]:
+        query_df[col] = pd.to_numeric(query_df[col], errors="coerce")
 
     # --- Write energy ---
     write_df["size_gb"] = write_df["size_bytes"] / 1e9
