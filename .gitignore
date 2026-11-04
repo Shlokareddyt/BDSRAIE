@@ -1,13 +1,15 @@
-# Raw downloaded data and generated format conversions are large and fully
-# reproducible from scripts/01_prepare_data.py and scripts/02_convert_formats.py.
+# Downloaded source data and generated converted files
 data/raw/
 data/converted/
 
-# Keep results/*.csv (the actual benchmark numbers) and results/convert_log.txt
-# checked in -- they are small and make the decision guide/slides reproducible
-# without re-running the full benchmark.
-
+# Python environments and cache
+venv/
+.venv/
 __pycache__/
-*.pyc
+*.py[cod]
+
+# Jupyter
 .ipynb_checkpoints/
+
+# macOS
 .DS_Store

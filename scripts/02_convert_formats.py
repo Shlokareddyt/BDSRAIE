@@ -71,17 +71,33 @@ def clear(path: str):
 # Parquet
 # ---------------------------------------------------------------------------
 def write_parquet(table: pa.Table, df: pd.DataFrame, codec: str, partitioning: str, out_dir: str):
+
     clear(out_dir)
+
     compression = None if codec == "none" else codec
+
     if partitioning == "none":
         pq.write_table(table, out_dir + ".parquet", compression=compression)
         return out_dir + ".parquet"
+
     elif partitioning == "by_date":
-        pq.write_to_dataset(table, root_path=out_dir, partition_cols=["pickup_date"], compression=compression)
+        pq.write_to_dataset(
+            table,
+            root_path=out_dir,
+            partition_cols=["pickup_date"],
+            compression=compression,
+            max_open_files=64
+        )
         return out_dir
+
     else:  # by_date_zone
-        pq.write_to_dataset(table, root_path=out_dir, partition_cols=["pickup_date", "zone_group"],
-                             compression=compression)
+        pq.write_to_dataset(
+            table,
+            root_path=out_dir,
+            partition_cols=["pickup_date", "zone_group"],
+            compression=compression,
+            max_open_files=64
+        )
         return out_dir
 
 
